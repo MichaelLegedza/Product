@@ -1,0 +1,54 @@
+/* -------- Common Styles -------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+:before,
+:after {
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+    box-sizing: border-box
+}
+
+body {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+input {
+  outline: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* -------- Container ------------ */
+
+[class*="__container"] {
+  max-width: 1060px;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+
+/* ----------- Header ----------- */
+.header__container {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
