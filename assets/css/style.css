@@ -1,6 +1,11 @@
 /* -------- Common Styles -------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500;600;700&display=swap');
-
+:root {
+  --text-color: #22343D;
+  --text-color-hover: #173A56;
+  --bg-white: #ffffff;
+  --bg-green: #02897A;
+}
 *,
 :before,
 :after {
@@ -45,10 +50,210 @@ button {
   padding: 0px 20px;
 }
 
+/* --------- PC ------------- */
+@media (max-width: 1199.5px) {
+  [class*="__container"] {
+    max-width: 970px;
+  }
+}
+
+/* --------- TABLET ------------- */
+@media (max-width: 991.5px) {
+  [class*="__container"] {
+    max-width: 780px;
+  }
+}
+
+@media (max-width: 767.5px) {
+  [class*="__container"] {
+    max-width: 650px;
+  }
+}
+
 /* ----------- Header ----------- */
 .header__container {
   min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 30px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--text-color-hover);
+}
+.logo::before {
+  content: url(../img/logo.svg);
+  width: 40px;
+  height: 36.36px;
+}
+
+/* Navigation */
+.menu {
+  margin-left: auto;
+}
+.menu__list {
+  display: flex;
+  gap: 30px;
+  margin-right: 24px;
+}
+.list__item a {
+  position: relative;
+  line-height: 22px;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: .1s linear;
+}
+.list__item a:hover {
+  color: var(--bg-green);
+  transition: .1s linear;
+}
+/* Вариация hover эффекта на ссылки 
+.list__item a:after {
+  content: '';
+  position: absolute;
+  display: none;
+  width: 0;
+  height: 2px;
+  background-color: #227fca;
+  transition: .2s linear;
+}
+.list__item a:hover:after {
+  width: 100%;
+  transition: .2s linear;
+} */
+
+/* Buttons */
+.header__buttons {
+  display: flex;
+  gap: 24px;
+}
+.button {
+  background-color: var(--bg-white);
+  transition: .1s linear;
+}
+.button.button--base {
+  width: 105px;
+  height: 43px;
+  line-height: 24px;
+  font-weight: 600;
+  border: 1px solid #BCD0E5;
+  border-radius: 4px;
+}
+.button.button--base:hover {
+  color: var(--bg-white);
+  background-color: var(--bg-green);
+  transition: .1s linear;
+}
+.button.button--theme img {
+  border-radius: 50%;
+  transition: .1s linear;
+}
+.button.button--theme img:hover {
+  box-shadow: 1px 1px 10px var(--bg-green);
+  transition: .1s linear;
+}
+
+/* ---- Header adaptive ---- */
+@media (max-width: 991.5px) {
+  .menu__list {
+    gap: 80px;
+  }
+  .menu__list.active {
+    display: flex;
+  }
+  .menu__list a {
+    font-size: 18px;
+    color: var(--bg-white);
+    letter-spacing: 1.5px;
+  }
+  .header__buttons {
+    margin-right: 25px;
+  }
+  .header__burger {
+    display: block;
+  }
+
+  /* Burger */
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+  }
+  .header__burger:before,
+  .header__burger:after {
+    content: '';
+    background-color: var(--text-color-hover);
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    transition: .2s linear;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger:after {
+    bottom: 0;
+  }
+  .header__burger.active:before {
+    transform: rotate(45deg);
+    top: 7px;
+  }
+  .header__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 8px;
+  }
+  .header__burger.active span {
+    transform: scale(0);
+  }
+  .header__burger span {
+    position: absolute;
+    background-color: var(--text-color-hover);
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: 8px;
+    transition: .2s linear;
+  }
+  .menu__list {
+    position: fixed;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 0;
+    height: 100%;
+    right: 0;
+    top: 0px;
+    transition: .3s linear;
+    z-index: -1;
+  }
+  .menu__list.active {
+    display: flex;
+    width: 100%;
+    top: 80px;
+    margin: 0;
+    padding: 80px 0px 0px;
+    background-color: var(--bg-green);
+    transition: .3s linear;
+    z-index: 0;
+  }
+}
+
+@media (max-width: 575.5px) {
+  .logo {
+    gap: 10px;
+  }
+  .header__buttons {
+    gap: 15px;
+  }
+  .header__buttons {
+    display: none;
+  }
 }
