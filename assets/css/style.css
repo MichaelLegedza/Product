@@ -266,7 +266,7 @@ button {
 
 /* --------------- Work ---------------- */
 .work {
-  padding: 30px 0px;
+  padding: 30px 0px 100px;
 }
 .work__container {
   display: flex;
@@ -346,6 +346,94 @@ button {
     gap: 50px;
   }
 }
+
+/* ---- Product ---- */
+.product {
+  background: linear-gradient(360deg, #EDEDED 0.35%, rgba(255, 255, 255, 0.0001) 50.63%);
+  border-radius: 50%;
+  padding: 0px 0px 90px;
+}
+.product__title {
+  text-align: center;
+  font-size: 32px;
+  line-height: 48px;
+  margin-bottom: 58px;
+}
+.product__features {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+.features__subtitle {
+  margin-bottom: 13px;
+  font-size: 22px;
+  line-height: 33px;
+}
+.features__subtitle::before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 30px;
+}
+.features__column--first .features__subtitle::before {
+  content: url(../img/feature-1.svg);
+}
+.features__column--second .features__subtitle::before {
+  content: url(../img/feature-2.svg);
+}
+.features__column--third .features__subtitle::before {
+  content: url(../img/feature-3.svg);
+}
+.features__column--fourth .features__subtitle::before {
+  content: url(../img/feature-4.svg);
+}
+.feaures__description {
+  line-height: 28px;
+}
+.product .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 991.5px) {
+  .product {
+    background: none;
+    border-radius: 0;
+  }
+  .product__title {
+    margin-bottom: 50px;
+  }
+  .product__features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .features__column {
+    width: 240px;
+  }
+  .features__subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .features__subtitle::before {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 767.5px) {
+  .product__features {
+    flex-direction: column;
+    text-align: center;
+    gap: 37px;
+  }
+}
+
 @media (max-width: 575.5px) {
   
 }
