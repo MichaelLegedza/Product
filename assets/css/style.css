@@ -794,10 +794,10 @@ h2.product__title {
 .strategies figure {
   display: flex;
   overflow: hidden;
+  border-radius: 8px 8px 0px 0px;
 }
 
 .strategies img {
-  border-radius: 8px 8px 0px 0px;
   transition: .1s linear;
 }
 
@@ -843,4 +843,60 @@ h2.product__title {
   height: 16px;
   border-radius: 50%;
   background: #EFEFEF;
+}
+
+/* -- Strategies adaptive -- */
+
+@media (max-width: 1299.5px) {
+  .slider__column {
+    max-width: 300px;
+  }
+
+  .strategies__container {
+    align-items: center;
+  }
+}
+
+@media (max-width: 991.5px) {
+  .strategies__subtitle {
+    text-align: center;
+  }
+
+  .strategies__slider {
+    max-width: 400px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .slider__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .strategies img {
+    width: 400px;
+  }
+
+  .column__info {
+    padding: 24px 0px 40px;
+    border: 0;
+  }
+}
+
+@media (max-width: 767.5px) {
+  .strategies__title {
+    margin-bottom: 20px;
+  }
+
+  .strategies img {
+    width: 290px;
+  }
+}
+
+@media (max-width: 567.5px) {
+  .strategies__title {
+    text-align: center;
+  }
 }
