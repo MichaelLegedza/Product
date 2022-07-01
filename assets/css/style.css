@@ -182,7 +182,7 @@ button {
   width: 105px;
   height: 43px;
   font-weight: 600;
-  border: 1px solid #BCD0E5;
+  border: 1px solid var(--bg-green);
 }
 
 .button.button--base:hover {
@@ -640,4 +640,207 @@ h2.product__title {
   .collaborative__container {
     flex-direction: column-reverse;
   }
+}
+
+/* ---- Process ---- */
+
+/* -- Спорный блок, попробовал свое решение касательно специалистов. Можно сделать иначе, либо как в оригинале, но такое решение показалось мне более уместным. -- */
+
+.process {
+  background: linear-gradient(180deg, #EDEDED 0.35%, rgba(255, 255, 255, 0.0001) 50.63%);
+  border-radius: 50%;
+  padding: 50px 0px;
+}
+
+.process__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.process__head {
+  max-width: 570px;
+}
+
+.process__expert {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.expert__review {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  gap: 35px;
+  box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.25);
+  border-radius: 50px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.expert__review::before {
+  content: '';
+  width: 100px;
+  height: 100px;
+}
+
+.expert__review.expert__review--one::before {
+  content: url(../img/author-1.png);
+}
+
+.expert__review.expert__review--two::before {
+  content: url(../img/author-2.png);
+}
+
+.expert__review.expert__review--one,
+.expert__review.expert__review--fourth {
+  padding: 0px 25px 0px 0px;
+}
+
+.expert__review.expert__review--two,
+.expert__review.expert__review--three {
+  padding: 0px 0px 0px 25px;
+  flex-direction: row-reverse;
+}
+
+.expert__review.expert__review--three::before {
+  content: url(../img/author-3.png);
+}
+
+.expert__review.expert__review--fourth::before {
+  content: url(../img/author-4.png);
+}
+
+.process .button.button--base.button--started {
+  width: 216px;
+}
+
+/* -- Process adaptive -- */
+
+@media (max-width: 1050.5px) {
+  .process__container {
+    padding: 0px 20px;
+  }
+}
+
+@media (max-width: 991.5px) {
+  .process__expert {
+    justify-content: center;
+  }
+  
+  .expert__review.expert__review--two,
+  .expert__review.expert__review--fourth {
+    flex-direction: row-reverse;
+  }
+
+  .expert__review.expert__review--three,
+  .expert__review.expert__review--fourth {
+    padding: 0px;
+  }
+
+  .expert__review.expert__review--three {
+    flex-direction: row;
+  }
+
+}
+@media (max-width: 767.5px) {
+  .process {
+    background: var(--bg-white);
+  }
+
+  .expert__review {
+    width: 350px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 421.5px) {
+  .expert__review {
+    width: 300px;
+  }
+}
+
+/* ---- Strategies ---- */ 
+.strategies {
+  padding: 100px 0px;
+}
+
+.strategies__container {
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.strategies__title {
+  font-size: 34px;
+  line-height: 51px;
+  margin-bottom: 8px;
+}
+
+.strategies__slider {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.slider__column:hover .column__name,
+.slider__column:focus .column__name {
+  color: var(--bg-green);
+  transition: .1s linear;
+}
+
+.strategies figure {
+  display: flex;
+  overflow: hidden;
+}
+
+.strategies img {
+  border-radius: 8px 8px 0px 0px;
+  transition: .1s linear;
+}
+
+.column__info {
+  padding: 24px 40px 30px 24px;
+  border: 1px solid #DEDEDE;
+  border-radius: 8px;
+}
+
+.slider__column:hover img,
+.slider__column:focus img {
+  transform: scale(1.03);
+  transition: .1s linear;
+}
+
+.column__date {
+  line-height: 28px;
+  margin-bottom: 12px;
+  color: var(--text-color);
+}
+
+.column__date span {
+  font-weight: 700;
+}
+
+.column__name {
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.slider__switch {
+  margin: 0 auto;
+}
+
+.slider__toggle ul {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.slider__switch button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #EFEFEF;
 }
