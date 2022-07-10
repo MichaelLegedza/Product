@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-light">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +24,12 @@
       <div class="header__buttons">
         <button class="button button--base">Sign In</button>
         <button class="button button--base">Sign Up</button>
-        <button class="button button--theme"><img src="./assets/img/dark-theme.svg" alt="Сменить тему"></button>
+        <div class="toggler">
+          <label id="switch" class="switch">
+            <input class="checkbox" type="checkbox" onchange="toggleTheme()" id="dark">
+            <span class="dark-img"></span>
+          </label>
+        </div>
       </div>
       <div class="header__burger"><span></span></div>
     </div>
@@ -71,7 +76,7 @@
     <section class="management">
       <div class="management__container">
         <div class="management__content">
-          <div class="validation">Effortless Validation for</div>
+          <p class="validation">Effortless Validation for</p>
           <h2 class="management__title title">Management</h2>
           <p class="management__description description">The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person. </p>
           <h3 class="management__subtitle subtitle">Accessory makers</h3>
@@ -86,21 +91,21 @@
       <div class="support__container">
         <div class="support__picture picture"><img src="./assets/img/customer-supports.svg" alt="Support"></div>
         <div class="support__content">
-          <div class="validation">Easier decision making for</div>
+          <p class="validation">Easier decision making for</p>
           <h2 class="support__title title">Customer Support</h2>
           <p class="support__description description">The Myspace page defines the individual, his or her characteristics, traits, personal choices and the overall personality of the person.</p>
-          <div class="support__benefits">
-            <div class="benefits benefits--one">Never worry about overpaying for your energy again.</div>
-            <div class="benefits benefits--two">We will only switch you to energy companies that we trust and will treat you right.</div>
-            <div class="benefits benefits--three">We track the markets daily and know where the savings are.</div>
-          </div>
+          <ul class="support__benefits">
+            <li class="benefits benefits--one"><p>Never worry about overpaying for your energy again.</p></li>
+            <li class="benefits benefits--two"><p>We will only switch you to energy companies that we trust and will treat you right.</p></li>
+            <li class="benefits benefits--three"><p>We track the markets daily and know where the savings are.</p></li>
+          </ul>
         </div>
       </div>
     </section>
     <section class="collaborative">
       <div class="collaborative__container">
         <div class="collaborative__content">
-          <div class="validation">Optimisation for</div>
+          <p class="validation">Optimisation for</p>
           <h2 class="collaborative__title title">Collaborative</h2>
           <p class="collaborative__description description">Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior.</p>
           <h3 class="collaborative__subtitle subtitle">Accessory makers</h3>

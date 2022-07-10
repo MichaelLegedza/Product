@@ -1,8 +1,22 @@
+.theme-light {
+  --bg-fill: #ffffff;
+  --text-color: #22343D;
+  --text-color-hover: #173A56;
+  --btn-bg: #00000000;
+  --block-round: #EDEDED;
+}
+
+.theme-dark {
+  --bg-fill: #1F2E35;
+  --text-color: #ffffff;
+  --text-color-hover: #ffffff;
+  --btn-bg: #00000000;
+  --block-round: #22343D;
+}
+
 /* -------- Common Styles -------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500;600;700&display=swap');
 :root {
-  --text-color: #22343D;
-  --text-color-hover: #173A56;
   --bg-white: #ffffff;
   --bg-green: #02897A;
 }
@@ -20,6 +34,7 @@ body {
   font-family: 'Poppins', 'Inter', sans-serif;
   font-size: 16px;
   line-height: 24px;
+  background-color: var(--bg-fill);
 }
 
 a {
@@ -77,6 +92,31 @@ button {
 button:hover {
   transition: .1s linear;
 }
+
+/* ---- Checkbox для переключения темной темы ---- */
+.toggler {
+  display: flex;
+  align-items: center;
+}
+
+.toggler label {
+  display: flex;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.dark-img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url(../img/dark-theme.svg);
+}
+
 
 /* -------- Container ------------ */
 
@@ -178,7 +218,8 @@ button:hover {
 }
 
 .button {
-  background-color: var(--bg-white);
+  background-color: var(--btn-bg);
+  color: var(--text-color);
   border-radius: 4px;
 }
 
@@ -186,22 +227,13 @@ button:hover {
   width: 105px;
   height: 43px;
   font-weight: 600;
-  border: 1px solid var(--bg-green);
+  border: 1px solid #BCD0E5;
 }
 
 .button.button--base:hover {
   color: var(--bg-white);
   background-color: var(--bg-green);
-}
-
-.button.button--theme img {
-  border-radius: 50%;
-  transition: .1s linear;
-}
-
-.button.button--theme img:hover {
-  box-shadow: 1px 1px 10px var(--bg-green);
-  transition: .1s linear;
+  border: 1px solid var(--bg-green)
 }
 
 /* ---- Header adaptive ---- */
@@ -422,7 +454,7 @@ button:hover {
 
 /* ---- Product ---- */
 .product {
-  background: linear-gradient(360deg, #EDEDED 0.35%, rgba(255, 255, 255, 0.0001) 50.63%);
+  background: linear-gradient(0deg, var(--block-round) 0.35%, rgba(255, 255, 255, 0.0001) 99.63%);
   border-radius: 50%;
   padding: 0px 0px 90px;
 }
@@ -650,7 +682,7 @@ h2.product__title {
 /* -- Спорный блок, попробовал свое решение касательно специалистов. Можно сделать иначе, либо как в оригинале, но такое решение показалось мне более уместным. -- */
 
 .process {
-  background: linear-gradient(180deg, #EDEDED 0.35%, rgba(255, 255, 255, 0.0001) 50.63%);
+  background: linear-gradient(179.59deg, #22343D 0.35%, rgba(67, 67, 67, 0.0001) 99.63%);
   border-radius: 50%;
   padding: 50px 0px;
 }
@@ -680,8 +712,9 @@ h2.product__title {
   gap: 35px;
   box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.25);
   border-radius: 50px;
-  font-weight: 500;
-  color: var(--text-color);
+  font-weight: 600;
+  color: #2F281E;
+  background-color: var(--bg-white);
 }
 
 .expert__review::before {
