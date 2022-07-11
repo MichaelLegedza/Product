@@ -11,8 +11,10 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     document.getElementById("header").style.borderBottom = "1px solid #dadde4";
+    document.getElementById("header").style.padding = "5px";
   } else {
     document.getElementById("header").style.borderBottom = "0";
+    document.getElementById("header").style.padding = "0";
   }
 }
 
@@ -34,7 +36,7 @@ function toggleTheme() {
   }
 }
 
-// Функция дя немедленной загрузки
+// Функция дя быстрой загрузки
 (function () {
   if (localStorage.getItem('theme') === 'theme-dark') {
       setTheme('theme-dark');

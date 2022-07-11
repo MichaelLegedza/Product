@@ -115,6 +115,14 @@ button:hover {
   width: 32px;
   height: 32px;
   background: url(../img/dark-theme.svg);
+  border-radius: 50%;
+  transition: .1s linear;
+}
+
+.dark-img:hover {
+  box-shadow: 0px 0px 5px var(--bg-green);
+  border-radius: 50%;
+  transition: .1s linear;
 }
 
 
@@ -206,25 +214,11 @@ button:hover {
   transition: .1s linear;
 }
 
-/* Вариация hover эффекта на ссылки 
-.list__item a:after {
-  content: '';
-  position: absolute;
-  display: none;
-  width: 0;
-  height: 2px;
-  background-color: #227fca;
-  transition: .2s linear;
-}
-.list__item a:hover:after {
-  width: 100%;
-  transition: .2s linear;
-} */
-
 /* Buttons */
 .header__buttons {
   display: flex;
   gap: 24px;
+  margin-right: 30px;
 }
 
 .button {
@@ -910,6 +904,7 @@ h2.product__title {
   font-size: 24px;
   line-height: 40px;
   color: #22343D;
+  font-weight: 800;
 }
 
 .slider__switch {
@@ -1499,4 +1494,30 @@ footer .copyright:hover {
   input {
     width: 100%;
   }
+}
+
+
+/* ---- Pricing html ---- */
+.price.pricing {
+  padding: 130px 0px 150px;
+}
+
+.pricing h1 {
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--text-color);
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.pricing .price__title {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.pricing .price__subtitle {
+  font-weight: 600;
 }
