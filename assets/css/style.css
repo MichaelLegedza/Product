@@ -706,48 +706,77 @@ h2.product__title {
 }
 
 .expert__review {
+  position: relative;
   display: flex;
   align-items: center;
-  width: 400px;
-  gap: 35px;
-  box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.25);
-  border-radius: 50px;
-  font-weight: 600;
-  color: #2F281E;
-  background-color: var(--bg-white);
+  gap: 16px;
 }
 
-.expert__review::before {
-  content: '';
-  width: 100px;
+.expert__review p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 274px;
+  height: 53px;
+  box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
+  border-radius: 26.5px;
+  background-color: #ffffff;
+  color: #2F281E;
+  font-weight: 600;
+}
+
+.expert__review img {
   height: 100px;
 }
 
-.expert__review.expert__review--one::before {
-  content: url(../img/author-1.png);
+.expert__review span.big {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  top: 66%;
+  background-color: #ffffff;
+  border-radius: 50%;
 }
 
-.expert__review.expert__review--two::before {
-  content: url(../img/author-2.png);
+.expert__review.expert__review.expert__review--one span.big {
+  left: 39%;
 }
 
-.expert__review.expert__review--one,
-.expert__review.expert__review--fourth {
-  padding: 0px 25px 0px 0px;
+.expert__review.expert__review.expert__review--two span.big {
+  left: 51%;
 }
 
-.expert__review.expert__review--two,
-.expert__review.expert__review--three {
-  padding: 0px 0px 0px 25px;
-  flex-direction: row-reverse;
+.expert__review.expert__review.expert__review--three span.big {
+  left: 50%;
 }
 
-.expert__review.expert__review--three::before {
-  content: url(../img/author-3.png);
+.expert__review.expert__review.expert__review--fourth span.big {
+  left: 42%;
 }
 
-.expert__review.expert__review--fourth::before {
-  content: url(../img/author-4.png);
+.expert__review span.mini {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  bottom: 5%;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.expert__review.expert__review.expert__review--one span.mini {
+  left: 36%;
+}
+
+.expert__review.expert__review.expert__review--two span.mini {
+  left: 56%;
+}
+
+.expert__review.expert__review.expert__review--three span.mini {
+  left: 55%;
+}
+
+.expert__review.expert__review.expert__review--fourth span.mini {
+  left: 39%;
 }
 
 .process .button.button--base.button--started {
