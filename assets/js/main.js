@@ -5,6 +5,17 @@ $(document).ready(function() {
   })
 });
 
+// header scroll
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    document.getElementById("header").style.borderBottom = "1px solid #dadde4";
+  } else {
+    document.getElementById("header").style.borderBottom = "0";
+  }
+}
+
 
 // Светлая и темная темы
 
