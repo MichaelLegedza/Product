@@ -4,6 +4,7 @@
   --text-color-hover: #173A56;
   --btn-bg: #00000000;
   --block-round: #EDEDED;
+  --entr: linear-gradient(180deg, #F7F7F7 0%, rgba(247, 247, 247, 0) 100%);
 }
 
 .theme-dark {
@@ -12,6 +13,7 @@
   --text-color-hover: #ffffff;
   --btn-bg: #00000000;
   --block-round: #22343D;
+  --entr: #22343D;
 }
 
 /* -------- Common Styles -------- */
@@ -276,6 +278,7 @@ button:hover {
     position: relative;
     width: 30px;
     height: 18px;
+    margin-left: 15px;
   }
 
   .header__burger:before,
@@ -754,19 +757,19 @@ h2.product__title {
   border-radius: 50%;
 }
 
-.expert__review.expert__review.expert__review--one span.big {
+.expert__review.expert__review--one span.big {
   left: 39%;
 }
 
-.expert__review.expert__review.expert__review--two span.big {
+.expert__review.expert__review--two span.big {
   left: 51%;
 }
 
-.expert__review.expert__review.expert__review--three span.big {
+.expert__review.expert__review--three span.big {
   left: 50%;
 }
 
-.expert__review.expert__review.expert__review--fourth span.big {
+.expert__review.expert__review--fourth span.big {
   left: 42%;
 }
 
@@ -779,19 +782,19 @@ h2.product__title {
   border-radius: 50%;
 }
 
-.expert__review.expert__review.expert__review--one span.mini {
+.expert__review.expert__review--one span.mini {
   left: 36%;
 }
 
-.expert__review.expert__review.expert__review--two span.mini {
+.expert__review.expert__review--two span.mini {
   left: 56%;
 }
 
-.expert__review.expert__review.expert__review--three span.mini {
+.expert__review.expert__review--three span.mini {
   left: 55%;
 }
 
-.expert__review.expert__review.expert__review--fourth span.mini {
+.expert__review.expert__review--fourth span.mini {
   left: 39%;
 }
 
@@ -829,6 +832,16 @@ h2.product__title {
     width: 229px;
     height: 62px;
     padding: 15px;
+  }
+}
+
+@media (max-width: 767.5px) {
+  .expert__review.expert__review--three span.mini {
+    left: 48%;
+  }
+  
+  .expert__review.expert__review--fourth span.mini {
+    left: 47%;
   }
 }
 
@@ -944,7 +957,7 @@ h2.product__title {
   .strategies__slider {
     max-width: 400px;
     flex-direction: column;
-    gap: 16px;
+    gap: 35px;
   }
 
   .slider__column {
@@ -955,7 +968,7 @@ h2.product__title {
   }
   
   .strategies img {
-    width: 400px;
+    width: 300px;
   }
 
   .column__info {
@@ -967,10 +980,6 @@ h2.product__title {
 @media (max-width: 767.5px) {
   .strategies__title {
     margin-bottom: 20px;
-  }
-
-  .strategies img {
-    width: 290px;
   }
 }
 
@@ -1520,4 +1529,107 @@ footer .copyright:hover {
 
 .pricing .price__subtitle {
   font-weight: 600;
+}
+
+/* ---- Enterprice ---- */
+.enterprice {
+  padding: 50px 0px;
+  background: var(--entr);
+}
+
+.enterprice__container {
+  flex-direction: column;
+}
+
+.enterprice__title {
+  margin-bottom: 16px;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.enterprice__subtitle {
+  margin-bottom: 20px;
+  font-size: 34px;
+  line-height: 51px;
+  font-weight: 800;
+}
+
+.enterprice__description {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+}
+
+.enterprice .button--base.order {
+  width: 224px;
+  height: 44px;
+}
+
+/* -- Enterprice adaptive -- */
+@media (max-width: 991.5px) {
+  .enterprice__title {
+    margin-bottom: 24px;
+  }
+
+  .enterprice__subtitle {
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 46px;
+  }
+}
+
+/* ---- Alongside ---- */
+.support.alongside {
+  padding: 150px 0px;
+}
+
+.alongside .support__container {
+  flex-direction: column;
+  gap: 0px;
+}
+
+.alongside__title {
+  margin-bottom: 56px;
+  font-size: 34px;
+  line-height: 51px;
+  font-weight: 800;
+}
+
+.alongside__block {
+  display: flex;
+  align-items: center;
+  gap: 63px; 
+}
+
+.alongside .support__benefits {
+  gap: 16px;
+}
+
+.alongside .benefits::before {
+  width: 50px;
+  height: 50px;
+}
+
+.alongside .benefits.benefits--one::before {
+  content: url(../img/alongside-feature-1.svg);
+}
+
+.alongside .benefits.benefits--two::before {
+  content: url(../img/alongside-feature-2.svg);
+}
+
+.alongside .benefits.benefits--three::before {
+  content: url(../img/alongside-feature-3.svg);
+}
+
+.alongside .benefits span {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.alongside .support__benefits p {
+  margin-bottom: 16px;
 }

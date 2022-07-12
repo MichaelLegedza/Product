@@ -11,7 +11,7 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     document.getElementById("header").style.borderBottom = "1px solid #dadde4";
-    document.getElementById("header").style.padding = "5px";
+    document.getElementById("header").style.padding = "5px 0px";
   } else {
     document.getElementById("header").style.borderBottom = "0";
     document.getElementById("header").style.padding = "0";
