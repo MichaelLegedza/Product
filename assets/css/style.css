@@ -1847,9 +1847,10 @@ details[open] > .faq__drop span {
 }
 
 /* -- Choose adaptive -- */
-@media (max-width: 991.5px) {
+@media (max-width: 1198.5px) {
   .choose__features {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .choose .list__column {
@@ -1858,5 +1859,11 @@ details[open] > .faq__drop span {
 
   .choose__description {
     padding: 0px 10px;
+  }
+}
+
+@media (min-width: 1199.5px) {
+  .choose__features {
+    flex-wrap: nowrap;
   }
 }
