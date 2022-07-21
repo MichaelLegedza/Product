@@ -2023,21 +2023,187 @@ details[open] > .faq__drop span {
 }
 
 /* -- Offer adaptive -- */
-@media (max-width: 991.5px) {
-
-}
-
 @media (max-width: 767.5px) {
   .offer__columns {
     flex-direction: column;
     gap: 100px;
   }
-
-
 }
-
 
 /* ---- Join customers ---- */
 .join.customers {
   padding-top: 150px;
+}
+
+
+/* -------- Resources html ---------- */
+
+/* ---- Great ---- */
+.great {
+  padding: 150px 15px;
+}
+
+.great__container {
+  gap: 20px;
+}
+
+.great__title,
+.great__description {
+  margin-bottom: 24px;
+  letter-spacing: -3%;
+}
+
+.great__title {
+  max-width: 380px;
+  font-size: 40px;
+  line-height: 59.6px;
+}
+
+.great__description {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.great form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  max-width: unset;
+  height: 66px;
+}
+
+.great input {
+  position: absolute;
+  width: 469px;
+  height: 66px;
+  padding: 25px 135px 25px 27px;
+  border: 1px solid #EAEAEA;
+  border-radius: 100px;
+  background-color: var(--bg-fill);
+  color: var(--text-color);
+}
+
+.great input::placeholder {
+  color: var(--text-color);
+}
+
+.great .button.button--base.order {
+  position: absolute;
+  width: 117px;
+  height: 50px;
+  margin: 0;
+  left: 68%;
+  border-radius: 100px;
+  border-color: var(--bg-green);
+}
+
+.great .button.button--base.order:hover {
+  box-shadow: 0px 0px 1px 2px var(--bg-green);
+  transition: .1s linear;
+}
+
+.membership {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.membership__join {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-color);
+}
+
+.membership__join span {
+  font-weight: 600;
+  color: var(--bg-green);
+}
+
+.great__picture {
+  position: relative;
+  left: 46px;
+}
+
+.great__picture img {
+  width: 541px;
+  height: 482px;
+}
+
+/* -- Great adaptive -- */
+@media (max-width: 1199.5px) {
+  .great input {
+    width: 380px;
+  }
+
+  .great .button.button--base.order {
+    left: 62%;
+  }
+}
+
+@media (max-width: 991.5px) {
+  .great__container {
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .great__title {
+    max-width: unset;
+    font-size: 36px;
+    line-height: 53px;
+    text-align: center;
+  }
+
+  .great__description {
+    text-align: center;
+  }
+
+  .great form {
+    position: static;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 55px;
+  }
+
+  .membership {
+    justify-content: center;
+  }
+
+  .great input {
+    position: static;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .great .button.button--base.order {
+    position: static;
+  }
+
+  .great__picture {
+    position: static;
+  }
+
+  .great__picture .picture-2 {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 767px) {
+  .great__picture .picture-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 767.5px) {
+  .great__picture .picture-1 {
+    display: none;
+  }
+}
+
+@media (max-width: 567.5px) {
+  .great input {
+    width: 300px;
+    padding: 25px 120px 25px 27px;
+  }
 }
